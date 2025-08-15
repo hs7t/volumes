@@ -1,0 +1,25 @@
+:root {
+    --font-family-serif: 'Newsreader', ui-serif, serif;
+    --general-font: var(--font-family-serif);
+}
+
+body {
+    font-family: var(--general-font);
+    max-width: 80%;
+    margin: auto; /* why is it so weird to center things lol */
+}
+
+.game > .puzzle-line {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.game > .puzzle-line > input {
+    margin: 1ch;
+    font-size: inherit;
+    font-family: inherit;
+
+    min-width: 8ch;
+    max-width: 16ch;
+    field-sizing: content;
+}
