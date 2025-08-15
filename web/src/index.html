@@ -15,15 +15,25 @@
         <title>Volumes</title>
     </head>
     <body>
-        <h1>Volumes</h1>
-        <p>Find the missing word!</p>
+        <header>
+            <h1>Volumes</h1>
+            <p><i>Find the missing word!</i></p>
+        </header>
 
-        <div class="game" id="game">
-            <div class="puzzle-line">
-                <p>Blah blah blah</p>
-                <input type="text" id="answer" />
-                <p>blah blah blah</p>
+        <main>
+            <div class="game" id="game">
+                <div class="snippet-collection">
+                    <h3 class="section-header">Hints</h3>
+                    <div class="snippet">
+                        <p>Blah blah blah blah blah blah</p>
+                    </div>
+                </div>
+                <div class="answer-area">
+                    <label for="answer-input">The missing word is...</label>
+                    <input id="answer-input" autofocus>
+                </div>
+
             </div>
-        </div>
+        </main>
     </body>
 </html>

@@ -1,20 +1,44 @@
 :root {
     --font-family-serif: 'Newsreader', ui-serif, serif;
     --general-font: var(--font-family-serif);
+    
+    --border-rounding-C: 2pt;
+
+    --color-A: rgb(104, 40, 0);
+    --background-color-A: rgb(255, 205, 173);
+    --background-color-B: rgb(255, 255, 255);
+
+    --font-size-A: 1.3rem;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+h3 .section-header {
+    
 }
 
 body {
+    background-color: var(--background-color-A);
+    color: var(--color-A);
     font-family: var(--general-font);
-    max-width: 80%;
+    font-size: var(--font-size-A);
+    max-width: clamp(40%, 80%, 1200px);
     margin: auto; /* why is it so weird to center things lol */
+    padding-top: 10vh;
 }
 
-.game > .puzzle-line {
-    display: inline-flex;
-    flex-wrap: wrap;
+header, section {
+    margin-bottom: 3rem;
 }
 
-.game > .puzzle-line > input {
+.game {
+    border-top: dashed 1px var(--color-A);
+    padding-top: 1em;
+}
+.game > .answer-area > input {
     margin: 1ch;
     font-size: inherit;
     font-family: inherit;
@@ -22,4 +46,19 @@ body {
     min-width: 8ch;
     max-width: 16ch;
     field-sizing: content;
+}
+
+.game > .snippet-collection > .snippet {
+    width: fit-content;
+    max-width: 100%;
+    padding: 1rem;
+    background-color: var(--background-color-B);
+    border-radius: var(--border-rounding-C);
+}
+
+.game > .snippet-collection > .snippet > p {
+    max-width: 100%;
+    text-wrap: balance;
+    margin: 0;
+    padding: 0;
 }
