@@ -42,10 +42,23 @@ header, section {
     margin: 1ch;
     font-size: inherit;
     font-family: inherit;
+    border: solid 1pt var(--color-A);
+    border-radius: var(--border-rounding-C);
 
     min-width: 8ch;
     max-width: 16ch;
     field-sizing: content;
+    transition: all;
+}
+
+.game > .answer-area > input:focus {
+    border: dashed 1pt var(--color-A);
+    outline: none;
+    transition: all;
+}
+
+.game > .answer-area > input[type="text"] {
+    background-color: var(--background-color-B);
 }
 
 .game > .snippet-collection > .snippet {
