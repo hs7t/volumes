@@ -1,5 +1,5 @@
 <script>
-  import { score } from './shared.svelte.js'
+  import { snippets } from './shared.svelte.js'
   import Snippets from './lib/Snippets.svelte'
   import StatusBar from './lib/StatusBar.svelte'
   import Solutions from './lib/Solutions.svelte'
@@ -8,14 +8,7 @@
 <main>
   <StatusBar />
 
-  <Snippets snippets={[
-      {
-        content: "hello, world, i am {tired}",
-        source: "Alice in Wonderland",
-        date: "2000"
-      }, 
-    ]}
-  />
+  <Snippets {snippets}/>
 
   <Solutions />
 </main>
