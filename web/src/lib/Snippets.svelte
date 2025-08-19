@@ -3,7 +3,7 @@
 </script>
 
 <div>
-    <h1>Snippets</h1>
+    <h2>Snippets</h2>
     <div class="snippets">
         {#each snippets as snippet}
             <figure class="snippet">
@@ -15,6 +15,8 @@
                 </figcaption>
             </figure>
         {/each}
+
+        <button>Show another snippet</button>
     </div>
 </div>
 
