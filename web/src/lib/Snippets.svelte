@@ -17,3 +17,19 @@
         {/each}
     </div>
 </div>
+
+<style>
+    figure {
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 1ch;
+    }
+
+    blockquote {
+        margin: 0;
+    }
+    
+    figcaption {
+        font-size: 1rem;
+    }
+</style>
