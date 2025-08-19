@@ -1,21 +1,21 @@
 <script>
+  import { score } from './shared.svelte.js'
   import Snippets from './lib/Snippets.svelte'
   import StatusBar from './lib/StatusBar.svelte'
   import Solutions from './lib/Solutions.svelte'
-
-  let score = $state(0)
 </script>
 
 <main>
-  <StatusBar {score} />
+  <StatusBar />
 
   <Snippets snippets={[
-    {
-      content: "hello, world, i am {tired}",
-      source: "Alice in Wonderland",
-      date: "2000"
-    }
-  ]} />
+      {
+        content: "hello, world, i am {tired}",
+        source: "Alice in Wonderland",
+        date: "2000"
+      }, 
+    ]}
+  />
 
   <Solutions />
 </main>

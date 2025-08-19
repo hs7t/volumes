@@ -1,7 +1,7 @@
 <script>
-    let { score } = $props();
+    import { score } from '../shared.svelte.js'
 </script>
 
 <div>
-    <p>Score: {score}</p>
+    <p>Score: {$score}</p>
 </div>

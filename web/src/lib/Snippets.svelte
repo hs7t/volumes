@@ -1,5 +1,10 @@
 <script>
+    import { score } from '../shared.svelte.js'
     let { snippets } = $props();
+
+    function newSnippet() {
+        $score -= 1;
+    }
 </script>
 
 <div>
@@ -16,7 +21,7 @@
             </figure>
         {/each}
 
-        <button>Show another snippet</button>
+        <button onclick={newSnippet}>Show another snippet</button>
     </div>
 </div>
 
