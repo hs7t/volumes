@@ -1,4 +1,4 @@
-const fetchSnippets = () => {
+export const fetchSnippets = () => {
     return [
         {
             content: 'hello, world, i am {tired}',
