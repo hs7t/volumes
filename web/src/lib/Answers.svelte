@@ -1,10 +1,14 @@
 <script>
     let { input = "", guesses = [""] } = $props()
+
+    const processSubmit = (event) => {
+        
+    }
 </script>
 
 <div class="card-area">
     <h2>What's today's word?</h2>
-    <form>
+    <form onsubmit={processSubmit}>
         <div class="input">
             <label for="input">Type in a guess...</label>
             <input type="text" id="input">
