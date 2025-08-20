@@ -1,0 +1,6 @@
+@import './shared.css';
+
+body {
+    background-color: var(--v-color-backgroundA);
+    color: var(--v-color-primary);
+}
