@@ -5,6 +5,11 @@ body {
     color: var(--v-color-primary);
 }
 
+h1, h2, h3 {
+    margin: 0;
+    margin-bottom: 1em;
+}
+
 .game-container {
     display: flex;
     flex-flow: column;
