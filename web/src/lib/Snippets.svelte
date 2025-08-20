@@ -7,7 +7,7 @@
     }
 </script>
 
-<div>
+<div class="card-area">
     <h2>Snippets</h2>
     <div class="snippets">
         {#each snippets as snippet}

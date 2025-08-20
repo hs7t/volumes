@@ -2,6 +2,6 @@
     import { score } from '../shared.svelte.js'
 </script>
 
-<div>
+<div class="card-area">
     <p>Score: {$score}</p>
 </div>
