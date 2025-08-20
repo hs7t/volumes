@@ -4,3 +4,20 @@ body {
     background-color: var(--v-color-backgroundA);
     color: var(--v-color-primary);
 }
+
+.game-container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 500px;
+
+    gap: 2rem;
+}
+
+.card-area {
+    width: 100%;
+    background-color: var(--v-color-backgroundB);
+    padding: 1rem;
+    border: solid var(--v-color-primary);
+    border-radius: var(--v-radius-primary);
+}

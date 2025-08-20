@@ -8,13 +8,15 @@
 </script>
 
 <main>
-  <div>
+  <header>
     <h1>Volumes</h1>
     <p>{date.toDateString()}</p>
-  </div>
-  <StatusBar />
-  <Snippets {snippets}/>
-  <Answers />
+  </header>
+  <section class="game-container">
+    <StatusBar />
+    <Snippets {snippets}/>
+    <Answers />
+  </section>
 </main>
 
 <style>
