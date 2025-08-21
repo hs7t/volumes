@@ -7,4 +7,7 @@
     --v-color-accent: #4d1e00;
 
     --v-radius-primary: 8pt;
+
+    --v-font-primary: "Spectral", ui-serif, serif;
+    --v-font-secondary: "Inclusive Sans", ui-sans-serif, sans-serif;
 }
