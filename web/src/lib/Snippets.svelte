@@ -1,5 +1,6 @@
 <script>
     import { score } from '../shared.svelte.js'
+    import Button from './components/Button.svelte'
     let { snippets } = $props();
 
     function newSnippet() {
@@ -20,16 +21,20 @@
                 </figcaption>
             </figure>
         {/each}
-
-        <button onclick={newSnippet}>Show another snippet</button>
     </div>
+    <Button action={newSnippet} text="Show another snippet" />
 </div>
 
 <style>
+    @import '../style/shared.css';
+
     figure {
         font-size: 1.4rem;
         margin: 0;
         padding: 1ch;
+        background-color: var(--v-color-backgroundA);
+        border-radius: var(--v-radius-secondary);
+        border: var(--v-border-secondary)
     }
 
     blockquote {
