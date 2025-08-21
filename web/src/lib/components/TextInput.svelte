@@ -11,15 +11,29 @@
         {/if}
         <input type="text" id="input" bind:value={input}>
     </div>
-    
+
     {#if action}
     <Button {action} text={buttonLabel}></Button>
     {/if}
 </div>
 
 <style>
+    @import '../../style/shared.css';
+
+    .answer-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem
+    }
+
     .input {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+    }
+
+    label {
+        font-family: var(--v-font-secondary);
+        color: var(--v-color-secondary);
+        margin-bottom: 0.25rem;
     }
 </style>
