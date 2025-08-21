@@ -1,13 +1,28 @@
 @import './shared.css';
 
 body {
+    margin-top: 10vh;
     background-color: var(--v-color-backgroundA);
     color: var(--v-color-primary);
+    font-family: var(--v-font-primary);
 }
 
-h1, h2, h3 {
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: min-content;
+    gap: 0; /* YOLO :P */
+}
+
+h1, h2, h3, h4, p {
     margin: 0;
-    margin-bottom: 1em;
 }
 
 .game-container {
@@ -17,12 +32,17 @@ h1, h2, h3 {
     max-width: 500px;
 
     gap: 2rem;
+    margin: auto;
 }
 
 .card-area {
     width: 100%;
-    background-color: var(--v-color-backgroundB);
     padding: 1rem;
-    border: solid var(--v-color-primary);
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+    background-color: var(--v-color-backgroundB);
+    border: var(--v-border-primary);
     border-radius: var(--v-radius-primary);
 }
