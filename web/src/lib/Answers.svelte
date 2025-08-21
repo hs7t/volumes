@@ -13,7 +13,7 @@
 
 <div class="card-area">
     <h2>What's today's word?</h2>
-    <TextInput bind:input={input} action={processSubmit}></TextInput>
+    <TextInput bind:input={input} action={processSubmit} inputLabel="Type a guess in..." buttonLabel="This is it!"></TextInput>
     {#if (guesses.length > 0)}
     <p class="guess-reminder">Your guesses: {#each guesses as guess}<span class="guess">{guess}</span>{/each}</p>
     {/if}
