@@ -1,7 +1,7 @@
 <script>
     import Button from "./Button.svelte";
 
-    let { action, input = $bindable(), inputLabel = undefined, buttonLabel = "Enter" } = $props()
+    let { action = undefined, input = $bindable(), inputLabel = undefined, buttonLabel = "Enter" } = $props()
 </script>
 
 <div class="answer-form">
@@ -11,7 +11,10 @@
         {/if}
         <input type="text" id="input" bind:value={input}>
     </div>
+    
+    {#if action}
     <Button {action} text={buttonLabel}></Button>
+    {/if}
 </div>
 
 <style>
