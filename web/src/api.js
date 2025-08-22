@@ -1,9 +1,10 @@
 export const fetchSnippets = () => {
     return [
         {
-            content: 'hello, world, i am {tired}',
-            source: 'Alice in Wonderland',
-            date: '2000',
+            content: 'I bet on {losing} dogs',
+            source: '"Puberty"',
+            by: 'Mitski',
+            date: '2016',
         },
     ]
 }
