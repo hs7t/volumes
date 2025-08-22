@@ -1,8 +1,9 @@
 @import './shared.css';
 
 body {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    padding: 10vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     background-color: var(--v-color-backgroundA);
     color: var(--v-color-primary);
     font-family: var(--v-font-primary);
