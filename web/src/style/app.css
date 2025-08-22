@@ -1,9 +1,15 @@
 @import './shared.css';
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    padding: 10vw;
+    width: clamp(40vw, 500px, 90vw);
     padding-top: 10vh;
     padding-bottom: 10vh;
+    margin: auto;
+
     background-color: var(--v-color-backgroundA);
     color: var(--v-color-primary);
     font-family: var(--v-font-primary);
@@ -13,13 +19,15 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     gap: 3rem;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    margin: auto;
     width: min-content;
     gap: 0; /* YOLO :P */
 }
@@ -39,7 +47,6 @@ h1 {
     max-width: 500px;
 
     gap: 2rem;
-    margin: auto;
 }
 
 .card-area {
