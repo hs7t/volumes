@@ -3,7 +3,7 @@
 </script>
 
 <div class="card-area">
-    <p class="score-count">Score: {$score}</p>
+    <p class="score-count"><b>Score:</b> {$score}</p>
 </div>
 
 <style>
