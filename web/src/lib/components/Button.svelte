@@ -13,8 +13,9 @@
         width: fit-content;
         max-width: 100%;
         padding: 0.8ch;
-        font-family: var(--v-font-secondary);
 
+        font-family: var(--v-font-secondary);
+        font-size: var(--v-size-font-primary);
         background-color: var(--v-color-accent);
         color: var(--v-color-accentContrast);
         border-radius: var(--v-radius-secondary);
