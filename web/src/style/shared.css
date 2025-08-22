@@ -11,8 +11,12 @@
     --v-radius-secondary: 4pt;
 
     --v-border-primary: solid var(--v-color-primary) 1pt;
+    --v-border-primaryThick: solid var(--v-color-primary) 2.5pt;
     --v-border-secondary: dashed var(--v-color-primary) 1pt;
 
     --v-font-primary: "Spectral", ui-serif, serif;
     --v-font-secondary: "Inclusive Sans", ui-sans-serif, sans-serif;
+
+    --v-size-font-largeA: 5rem;
+    --v-size-font-primary: 1rem;
 }

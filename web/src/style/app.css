@@ -2,9 +2,11 @@
 
 body {
     margin-top: 10vh;
+    margin-bottom: 10vh;
     background-color: var(--v-color-backgroundA);
     color: var(--v-color-primary);
     font-family: var(--v-font-primary);
+    font-size: var(--v-size-font-primary);
 }
 
 main {
@@ -23,6 +25,10 @@ header {
 
 h1, h2, h3, h4, p {
     margin: 0;
+}
+
+h1 {
+    font-size: var(--v-size-font-largeA);
 }
 
 .game-container {
