@@ -10,7 +10,7 @@
 <main>
   <header>
     <h1>Volumes</h1>
-    <p>{date.toDateString()}</p>
+    <p>for {date.toDateString()}</p>
   </header>
   <section class="game-container">
     <StatusBar />
@@ -20,4 +20,9 @@
 </main>
 
 <style>
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
