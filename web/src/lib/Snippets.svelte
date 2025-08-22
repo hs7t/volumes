@@ -17,7 +17,7 @@
                     {snippet.content.replace(/{.*?}/gm, '[__]')}
                 </blockquote>
                 <figcaption>
-                    From <cite>{snippet.source}</cite>, {snippet.date}
+                    From <cite>{snippet.source}</cite> {#if snippet.by} by {snippet.by}{/if} ({snippet.date})
                 </figcaption>
             </figure>
         {/each}
@@ -32,7 +32,7 @@
         font-size: 1.4rem;
         margin: 0;
         padding: 1ch;
-        background-color: var(--v-color-backgroundA);
+        background-color: var(--v-color-backgroundC);
         border-radius: var(--v-radius-secondary);
         border: var(--v-border-secondary)
     }
@@ -42,6 +42,7 @@
     }
     
     figcaption {
-        font-size: 1rem;
+        font-family: var(--v-font-secondary);
+        font-size: var(--v-size-font-primary);
     }
 </style>
