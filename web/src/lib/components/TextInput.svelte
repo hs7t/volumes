@@ -36,15 +36,17 @@
         font-family: var(--v-font-secondary);
         padding: 0.8ch;
 
-        border: var(--v-border-primary);
-        border-radius: var(--v-radius-secondary);
+        border: none;
+        border-bottom: var(--v-border-secondary);
+        border-top-left-radius: var(--v-radius-secondary);
+        border-top-right-radius: var(--v-radius-secondary);
         background-color: var(--v-color-backgroundC);
         color: inherit;
     }
 
     .input-box:hover, .input-box:active, .input-box:focus {
-        transition: all 200ms;
-        border: var(--v-border-primaryThick);
+        border-radius: var(--v-radius-secondary);
+        transition: all 400ms;
     }
 
     label {
