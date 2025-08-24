@@ -6,5 +6,11 @@ export const fetchSnippets = () => {
             by: 'Mitski',
             date: '2016',
         },
+        {
+            content: "I'm {losing} my temper",
+            source: 'Trust me bro',
+            by: 'Me',
+            date: '2025',
+        },
     ]
 }
