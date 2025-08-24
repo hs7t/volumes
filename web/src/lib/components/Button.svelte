@@ -28,7 +28,7 @@
     button:active {
         outline: var(--v-border-primary);
         outline-offset: 2pt;
-        transform: scale(0.9) rotate(1deg);
+        transform: scale(0.98) rotate(1deg);
         transition: all 100ms;
     }
 
@@ -41,6 +41,6 @@
 
     button:disabled:active {
         outline: var(--v-border-secondary);
-        transform: scale(1.01);
+        transform: none;
     }
 </style>
