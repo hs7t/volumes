@@ -17,7 +17,7 @@
         <li>Try not to lose :P</li>
     </ul>
 
-    <Button action={() => makeShown(false)} text="Goo!"></Button>
+    <Button action={() => makeShown(false)} text="Got it!"></Button>
 {/snippet}
 
 <Dialog {content} bind:shown={shown}></Dialog>
