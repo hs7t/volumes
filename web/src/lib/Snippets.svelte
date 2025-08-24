@@ -37,7 +37,7 @@
         padding: 1ch;
         background-color: var(--v-color-backgroundC);
         border-radius: var(--v-radius-secondary);
-        border: var(--v-border-secondary)
+        border: var(--v-border-secondary);
     }
 
     blockquote {
@@ -47,5 +47,11 @@
     figcaption {
         font-family: var(--v-font-secondary);
         font-size: var(--v-size-font-primary);
+    }
+    
+    .snippets {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 </style>
