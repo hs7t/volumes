@@ -1,14 +1,13 @@
 <script>
-    import { processGuess, checkCorrectness, guesses, normalize, score } from '../shared.svelte'
+    import { processGuess, guesses, normalize, score } from '../shared.svelte'
     import TextInput from './components/TextInput.svelte'
 
     let input = $state("")
     let processSubmit = () => {
         if (!(input === "" || input === undefined || input === null)) {
             input = normalize(input)
-            processGuess(input)
-            
-            if (checkCorrectness(input) == false) {
+            let processedGuess = processGuess(input)
+            if (!processedGuess.correct) {
                 $score -= 1
             }
         }
