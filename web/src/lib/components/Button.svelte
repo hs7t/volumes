@@ -1,8 +1,8 @@
 <script>
-    let { action, text, disabled = false } = $props()
+    let { action, text, disabled = false, style = "" } = $props()
 </script>
 
-<button onclick={action} {disabled}>
+<button onclick={action} {disabled} {style}>
     {text}
 </button>
 
@@ -10,19 +10,27 @@
     @import '../../style/shared.css';
     
     button {
+        --l-size-font: var(--v-size-font-primary);
+
         width: fit-content;
         max-width: 100%;
         padding: 0.8ch;
 
         font-family: var(--v-font-secondary);
-        font-size: var(--v-size-font-primary);
+        font-size: var(--l-font-size);
         background-color: var(--v-color-accent);
         color: var(--v-color-accentContrast);
         border-radius: var(--v-radius-secondary);
         border: var(--v-border-primary);
         border-color: var(--v-color-secondary);
 
-        transition: all 300ms;
+        transition: all 250ms;
+    }
+
+    button:focus {
+        outline: var(--v-border-secondary);
+        outline-offset: 3pt;
+        transition: all 200ms;
     }
 
     button:active {
