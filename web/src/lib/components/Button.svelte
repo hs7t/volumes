@@ -37,11 +37,10 @@
         color: var(--v-color-accentContrast);
         border: var(--v-border-primary);
         cursor: not-allowed;
-        transition: none;
     }
 
     button:disabled:active {
         outline: var(--v-border-secondary);
-        transform: none;
+        transform: scale(1.01);
     }
 </style>
