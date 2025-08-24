@@ -1,7 +1,3 @@
-export const fetchSnippets = () => {
-    return fetchPuzzle().snippets
-}
-
 export const fetchPuzzle = () => {
     return {
         snippets: [

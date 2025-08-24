@@ -1,8 +1,8 @@
 import { writable } from 'svelte/store'
-import { fetchSnippets } from './api'
+import { fetchPuzzle } from './api'
 
 export const score = writable(5) // TODO: move to config file
-export const snippets = fetchSnippets()
+export const snippets = fetchPuzzle().snippets
 
 let initialHints = []
 let i = 0
@@ -37,4 +37,8 @@ export function showHint() {
             break
         }
     }
+}
+
+export function checkHint(hint) {
+    return hint == fetchPuzzle().answer
 }
