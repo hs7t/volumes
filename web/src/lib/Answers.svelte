@@ -1,13 +1,11 @@
 <script>
-    import { score } from '../shared.svelte.js'
-    import TextInput from './components/TextInput.svelte';
+    import { processGuess, guesses } from '../shared.svelte'
+    import TextInput from './components/TextInput.svelte'
 
-    let guesses = $state([])
     let input = $state("")
-
-    const processSubmit = (event) => {
-        guesses.push(input)
-        $score -= 1
+    let processSubmit = () => {
+        if (!(input === "" || input === undefined || input === null))
+            processGuess(input)
     }
 </script>
 

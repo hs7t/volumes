@@ -3,6 +3,7 @@ import { fetchPuzzle } from './api'
 
 export const score = writable(5) // TODO: move to config file
 export const snippets = fetchPuzzle().snippets
+export var guesses = $state([])
 
 let initialHints = []
 let i = 0
@@ -41,4 +42,10 @@ export function showHint() {
 
 export function checkHint(hint) {
     return hint == fetchPuzzle().answer
+}
+
+// Guesses
+
+export function processGuess(input) {
+    guesses.push(input)
 }
