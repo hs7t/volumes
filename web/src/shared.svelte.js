@@ -20,12 +20,10 @@ export function fetchShownHints(hints) {
      * @param hints hints to look for (shown == true) in
      * @returns shown hints (snippet dict)
      */
-    let shownHints = () => {
-        let output = []
-        for (let hint of hints) if (hint?.shown == true) output.push(hint)
-        return output
-    }
-    return shownHints
+
+    let output = []
+    for (let hint of hints) if (hint?.shown == true) output.push(hint)
+    return output
 }
 
 export function showHint() {
