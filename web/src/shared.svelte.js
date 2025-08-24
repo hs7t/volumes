@@ -27,6 +27,14 @@ export function fetchShownHints(hints) {
 }
 
 export function showHint() {
+    let hintFound = false
     for (let hint of hints) {
+        if (hint.shown == false) {
+            hint.shown = true
+            hintFound = true
+        }
+        if (hintFound == true) {
+            break
+        }
     }
 }
