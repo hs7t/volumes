@@ -42,10 +42,18 @@
         border-top-right-radius: var(--v-radius-secondary);
         background-color: var(--v-color-backgroundC);
         color: inherit;
+        transition: all 200ms;
     }
 
     .input-box:hover, .input-box:active, .input-box:focus {
+        border: var(--v-border-secondary);
         border-radius: var(--v-radius-secondary);
+        transition: all 400ms;
+    }
+
+    .input-box:active, .input-box:focus {
+        outline: none;
+        border: var(--v-border-primary);
         transition: all 400ms;
     }
 
