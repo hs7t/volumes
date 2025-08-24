@@ -2,10 +2,12 @@
   import Snippets from './lib/Snippets.svelte'
   import StatusBar from './lib/StatusBar.svelte'
   import Answers from './lib/Answers.svelte'
+  import SplashScreen from './lib/SplashScreen.svelte'
   
   let date = new Date
 </script>
 
+<SplashScreen />
 <main>
   <header>
     <h1>Volumes</h1>
