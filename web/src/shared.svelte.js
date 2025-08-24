@@ -9,7 +9,7 @@ let i = 0
 for (let snippet of snippets) {
     initialHints.push({
         ...snippet,
-        shown: i == 0, // first hint shown
+        shown: i === 0, // first hint shown
     })
     i++
 }
