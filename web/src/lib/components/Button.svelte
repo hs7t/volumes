@@ -1,8 +1,8 @@
 <script>
-    let { action, text } = $props()
+    let { action, text, disabled = false } = $props()
 </script>
 
-<button onclick={action}>
+<button onclick={action} {disabled}>
     {text}
 </button>
 
@@ -19,6 +19,29 @@
         background-color: var(--v-color-accent);
         color: var(--v-color-accentContrast);
         border-radius: var(--v-radius-secondary);
-        border: none;
+        border: var(--v-border-primary);
+        border-color: var(--v-color-secondary);
+
+        transition: all 300ms;
+    }
+
+    button:active {
+        outline: var(--v-border-primary);
+        outline-offset: 2pt;
+        transform: scale(0.9) rotate(1deg);
+        transition: all 100ms;
+    }
+
+    button:disabled {
+        background-color: var(--v-color-secondary);
+        color: var(--v-color-accentContrast);
+        border: var(--v-border-primary);
+        cursor: not-allowed;
+        transition: none;
+    }
+
+    button:disabled:active {
+        outline: var(--v-border-secondary);
+        transform: none;
     }
 </style>
