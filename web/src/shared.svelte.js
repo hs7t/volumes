@@ -40,12 +40,12 @@ export function showHint() {
     }
 }
 
-export function checkHint(hint) {
-    return hint == fetchPuzzle().answer
+export function checkCorrectness(guess) {
+    return guess == fetchPuzzle().answer
 }
 
 // Guesses
 
 export function processGuess(input) {
-    guesses.push(input)
+    guesses.push({ guess: input, correct: checkCorrectness(input) })
 }
