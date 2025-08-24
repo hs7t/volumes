@@ -1,11 +1,13 @@
 <script>
-    import { processGuess, guesses } from '../shared.svelte'
+    import { processGuess, guesses, normalize } from '../shared.svelte'
     import TextInput from './components/TextInput.svelte'
 
     let input = $state("")
     let processSubmit = () => {
-        if (!(input === "" || input === undefined || input === null))
+        if (!(input === "" || input === undefined || input === null)) {
+            input = normalize(input)
             processGuess(input)
+        }
     }
 </script>
 
