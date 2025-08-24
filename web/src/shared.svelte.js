@@ -49,3 +49,9 @@ export function checkCorrectness(guess) {
 export function processGuess(input) {
     guesses.push({ guess: input, correct: checkCorrectness(input) })
 }
+
+// Utilities
+
+export function normalize(text) {
+    return text.toLowerCase().trim()
+}
