@@ -15,7 +15,7 @@
 <dialog bind:this={dialogReference} closedby="any">
     <h2>Volumes</h2>
     <ul>
-        <li>Find the missing word using three snippets of text.</li>
+        <li>Find the missing word using up to three snippets of text.</li>
         <li>You have five points.</li>
         <li>Showing a snippet or entering a guess deducts one!</li>
         <li>Try not to lose :P</li>
