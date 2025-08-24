@@ -1,5 +1,4 @@
 <script>
-  import { snippets } from './shared.svelte.js'
   import Snippets from './lib/Snippets.svelte'
   import StatusBar from './lib/StatusBar.svelte'
   import Answers from './lib/Answers.svelte'
@@ -14,7 +13,7 @@
   </header>
   <section class="game-container">
     <StatusBar />
-    <Snippets {snippets}/>
+    <Snippets/>
     <Answers />
   </section>
 </main>
