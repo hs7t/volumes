@@ -1,5 +1,5 @@
 <script>
-    import { processGuess, guesses, normalize } from '../shared.svelte'
+    import { processGuess, checkCorrectness, guesses, normalize, score } from '../shared.svelte'
     import TextInput from './components/TextInput.svelte'
 
     let input = $state("")
@@ -7,6 +7,10 @@
         if (!(input === "" || input === undefined || input === null)) {
             input = normalize(input)
             processGuess(input)
+            
+            if (checkCorrectness(input) == false) {
+                $score -= 1
+            }
         }
     }
 </script>
