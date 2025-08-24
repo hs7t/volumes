@@ -31,6 +31,12 @@
 <style>
     @import '../style/shared.css';
 
+    .snippets {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     figure {
         font-size: 1.4rem;
         margin: 0;
@@ -38,6 +44,27 @@
         background-color: var(--v-color-backgroundC);
         border-radius: var(--v-radius-secondary);
         border: var(--v-border-secondary);
+        animation: 400ms beam-in;
+        transition: all 300ms;
+    }
+
+    figure:active {
+        transform: rotate(-1deg);
+        transition: all 250ms;
+    }
+
+    @keyframes beam-in {
+        0% {
+            transform: scale(0.8);
+            opacity: 0%;
+        }
+        50% {
+            transform: scale(1.05);
+            opacity: 100%;
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 
     blockquote {
@@ -48,10 +75,4 @@
         font-family: var(--v-font-secondary);
         font-size: var(--v-size-font-primary);
     }
-    
-    .snippets {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-</style>
+    </style>
