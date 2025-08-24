@@ -43,7 +43,7 @@ export function showHint() {
 // Guesses
 
 export function checkCorrectness(guess) {
-    return guess == fetchPuzzle().answer
+    return guess == fetchPuzzle().solution
 }
 
 export function processGuess(input) {
