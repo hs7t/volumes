@@ -47,7 +47,9 @@ export function checkCorrectness(guess) {
 }
 
 export function processGuess(input) {
-    guesses.push({ content: input, correct: checkCorrectness(input) })
+    let output = { content: input, correct: checkCorrectness(input) }
+    guesses.push(output)
+    return output
 }
 
 // Utilities
