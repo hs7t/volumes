@@ -1,35 +1,40 @@
-import { writable } from 'svelte/store'
 import { fetchPuzzle } from './api'
 
-export const score = writable(5) // TODO: move to config file
 export const snippets = fetchPuzzle().snippets
-export var guesses = $state([])
 
-let initialHints = []
-let i = 0
-for (let snippet of snippets) {
-    initialHints.push({
-        ...snippet,
-        shown: i === 0, // first hint shown
-    })
-    i++
+function initialHints() {
+    let initialHints = []
+    let i = 0
+    for (let snippet of snippets) {
+        initialHints.push({
+            ...snippet,
+            shown: i === 0, // first hint shown
+        })
+        i++
+    }
+    return initialHints
 }
-export var hints = $state(initialHints)
 
-export function fetchShownHints(hints) {
+export const gameState = $state({
+    guesses: [],
+    score: 5,
+    hints: initialHints(),
+})
+
+export function fetchShownHints() {
     /**
      * @param hints hints to look for (shown == true) in
      * @returns shown hints (snippet dict)
      */
 
     let output = []
-    for (let hint of hints) if (hint?.shown == true) output.push(hint)
+    for (let hint of gameState.hints) if (hint?.shown == true) output.push(hint)
     return output
 }
 
 export function showHint() {
     let hintFound = false
-    for (let hint of hints) {
+    for (let hint of gameState.hints) {
         if (hint.shown == false) {
             hint.shown = true
             hintFound = true
@@ -48,8 +53,19 @@ export function checkCorrectness(guess) {
 
 export function processGuess(input) {
     let output = { content: input, correct: checkCorrectness(input) }
-    guesses.push(output)
+    gameState.guesses.push(output)
     return output
+}
+
+// Game state
+
+export function correctGuessExists() {
+    for (let guess of gameState.guesses) {
+        if (guess.correct) {
+            return true
+        }
+    }
+    return false
 }
 
 // Utilities

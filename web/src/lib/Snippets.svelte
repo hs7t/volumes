@@ -1,20 +1,20 @@
 <script>
-    import { hints, fetchShownHints, score, showHint } from '../shared.svelte.js'
+    import { gameState, fetchShownHints, showHint } from '../shared.svelte.js'
     import Button from './components/Button.svelte'
     function newSnippet() {
-        $score -= 1;
+        gameState.score -= 1;
         showHint();
     }
 
     function noHintsLeft() {
-        return fetchShownHints(hints).length === hints.length
+        return fetchShownHints().length === gameState.hints.length
     }
 </script>
 
 <div class="card-area">
     <h2>Snippets</h2>
     <div class="snippets">
-        {#each fetchShownHints(hints) as hint}
+        {#each fetchShownHints() as hint}
             <figure class="snippet">
                 <blockquote>
                     {hint.content.replace(/{.*?}/gm, '[__]')}
@@ -25,7 +25,7 @@
             </figure>
         {/each}
     </div>
-    <Button action={newSnippet} text="Show another snippet ({fetchShownHints(hints).length}/{hints.length})" disabled={noHintsLeft()} />
+    <Button action={newSnippet} text="Show another snippet ({fetchShownHints().length}/{gameState.hints.length})" disabled={noHintsLeft()} />
 </div>
 
 <style>

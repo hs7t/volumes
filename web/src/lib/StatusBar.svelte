@@ -1,9 +1,9 @@
 <script>
-    import { score } from '../shared.svelte.js'
+    import { gameState } from '../shared.svelte.js'
 </script>
 
 <div class="card-area">
-    <p class="score-count"><b>Score:</b> {$score}</p>
+    <p class="score-count"><b>Score:</b> {gameState.score}</p>
 </div>
 
 <style>

@@ -1,11 +1,12 @@
 <script>
     import Dialog from "./components/Dialog.svelte"
-    import { score, fetchShownHints } from "../shared.svelte"
+    import { gameState, fetchShownHints } from "../shared.svelte"
 
     let { shown, won } = $props()
+    
     let dialogContent = {
         stats:  {
-            score: $score,
+            score: gameState.score,
             hintAmount: fetchShownHints().length,
         }
     }

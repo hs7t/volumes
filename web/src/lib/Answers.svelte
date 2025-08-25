@@ -1,5 +1,5 @@
 <script>
-    import { processGuess, guesses, normalize, score } from '../shared.svelte'
+    import { processGuess, gameState, normalize } from '../shared.svelte'
     import TextInput from './components/TextInput.svelte'
 
     let input = $state("")
@@ -8,7 +8,7 @@
             input = normalize(input)
             let processedGuess = processGuess(input)
             if (!processedGuess.correct) {
-                $score -= 1
+                gameState.score -= 1
             }
         }
     }
@@ -18,8 +18,8 @@
     <h2>What's today's word?</h2>
     <TextInput bind:input={input} action={processSubmit} inputLabel="Type a guess in..." buttonLabel="This is it!"></TextInput>
 
-    {#if (guesses.length > 0)}
-        <p class="guess-reminder">Your guesses: {#each guesses as guess}<span class="guess">{guess.content}</span>{/each}</p>
+    {#if (gameState.guesses.length > 0)}
+        <p class="guess-reminder">Your guesses: {#each gameState.guesses as guess}<span class="guess">{guess.content}</span>{/each}</p>
     {/if}
 </div>
 
