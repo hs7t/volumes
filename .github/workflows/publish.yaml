@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# build script, based on Vite docs -
 name: Deploy static content to Pages
 
 on:
@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           # Upload dist folder
-          path: './web/dist'
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
