@@ -1,25 +1,29 @@
 <script>
     import Dialog from "./components/Dialog.svelte"
-    import { gameState, fetchShownHints } from "../shared.svelte"
-
-    let { shown, won } = $props()
+    import { gameState, checkStatus, fetchShownHints } from "../shared.svelte.js"
     
+    let gameStatus = $derived(checkStatus(gameState))
+    let shown = $derived(gameStatus == 'won' || gameStatus == 'lost')
     let dialogContent = {
         stats:  {
             score: gameState.score,
             hintAmount: fetchShownHints().length,
         }
     }
-    switch (won) {
-        case true:
-            dialogContent.title = "Woohoo!"
-            dialogContent.message = "You won!"
-            break
-        case false:
-            dialogContent.title = "Good game!"
-            dialogContent.message = "Ah, you didn't make it this time. It's alright, though."
-            break
-    }
+
+    $effect(() => {
+        switch (gameStatus) {
+            case 'won':
+                dialogContent.title = "Woohoo!"
+                dialogContent.message = "You won!"
+                break
+            case 'lost':
+                dialogContent.title = "Good game!"
+                dialogContent.message = "Ah, you didn't make it this time. It's alright, though."
+                dialogContent.hint = ("The word was " + gameState.solution)
+                break
+        }
+    })
 </script>
 
 {#snippet content()}

@@ -15,11 +15,32 @@ function initialHints() {
     return initialHints
 }
 
-export const gameState = $state({
+export let gameState = $state({
     guesses: [],
     score: 5,
     hints: initialHints(),
+    solution: fetchPuzzle().solution,
 })
+
+export function checkStatus(game) {
+    function checkWon() {
+        for (let guess of game.guesses) {
+            if (guess.correct) return true
+        }
+        return false
+    }
+    function checkLost() {
+        if (game.score <= 0) {
+            return true
+        } else return false
+    }
+
+    if (checkWon() == true && checkLost() == false) {
+        return 'won'
+    } else if (checkLost() == true) {
+        return 'lost'
+    } else return 'playing'
+}
 
 export function fetchShownHints() {
     /**
