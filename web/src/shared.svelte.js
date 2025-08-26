@@ -94,3 +94,7 @@ export function correctGuessExists() {
 export function normalize(text) {
     return text.toLowerCase().trim()
 }
+
+export function resetGame() {
+    location.reload()
+}
