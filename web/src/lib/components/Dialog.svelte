@@ -31,6 +31,12 @@
         animation: 400ms dialogEnter;
     }
 
+    dialog:focus {
+        outline: var(--v-border-secondary);
+        outline-offset: 3pt;
+        transition: all 200ms;
+    }
+
     @keyframes dialogEnter {
         0% {
             transform: rotate(-1deg);
