@@ -17,7 +17,7 @@
         {#each fetchShownHints() as hint}
             <figure class="snippet">
                 <blockquote>
-                    {hint.content.replace(/{.*?}/gm, '[__]')}
+                    {hint.content.replace(/{.*?}/gm, '[?]')}
                 </blockquote>
                 <figcaption>
                     From <cite>{hint.source}</cite> {#if hint.by} by {hint.by}{/if} ({hint.date})
