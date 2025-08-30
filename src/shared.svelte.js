@@ -92,7 +92,7 @@ export function correctGuessExists() {
 // Utilities
 
 export function normalize(text) {
-    return text.toLowerCase().trim()
+    return text.toLowerCase().trim().replace(/[.!-]/g, "")
 }
 
 export function resetGame() {
