@@ -1,6 +1,7 @@
 import { fetchPuzzle } from './api'
+let puzzle = await fetchPuzzle()
 
-export const snippets = fetchPuzzle().snippets
+export const snippets = puzzle.snippets
 
 function initialHints() {
     let initialHints = []
@@ -19,7 +20,7 @@ export let gameState = $state({
     guesses: [],
     score: 5,
     hints: initialHints(),
-    solution: fetchPuzzle().solution,
+    solution: puzzle.solution,
 })
 
 export function checkStatus(game) {
@@ -69,7 +70,7 @@ export function showHint() {
 // Guesses
 
 export function checkCorrectness(guess) {
-    return guess == fetchPuzzle().solution
+    return guess == puzzle.solution
 }
 
 export function processGuess(input) {
