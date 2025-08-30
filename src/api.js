@@ -1,11 +1,7 @@
 async function fromJSONFile(path) {
     const response = await fetch(path)
-
     const text = await response.text()
-    console.log('Response:', text) // See what you're actually getting
-    console.log('Status:', response.status)
-    console.log('URL:', response.url)
-
+    
     return JSON.parse(text)
 }
 
