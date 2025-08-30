@@ -1,19 +1,12 @@
+async function fromJSONFile(path) {
+    const file = (await fetch(path)).json()
+    return JSON.parse(await file)
+}
+
+const config = fromJSONFile('./config.json')
+const apiURL = config['volnet_api_url']
+
 export const fetchPuzzle = () => {
-    return {
-        snippets: [
-            {
-                content: 'I bet on {losing} dogs',
-                source: '"Puberty"',
-                by: 'Mitski',
-                date: '2016',
-            },
-            {
-                content: "I'm {losing} my temper",
-                source: 'Trust me bro',
-                by: 'Me',
-                date: '2025',
-            },
-        ],
-        solution: 'losing',
-    }
+    const puzzleURL = new URL('/puzzles/', apiURL)
+    return fromJSONFile(puzzleURL)
 }
