@@ -32,6 +32,6 @@
         "src/**/*.d.ts",
         "src/**/*.js",
         "src/**/*.svelte",
-        "src/config.json"
+        "src/public/config.json"
     ]
 }
