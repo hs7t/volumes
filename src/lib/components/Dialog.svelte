@@ -1,4 +1,6 @@
 <script>
+    import { fade } from 'svelte/transition';
+
     let { content, shown = $bindable() } = $props()
     let dialogReference
     
@@ -29,6 +31,8 @@
         background-color: var(--v-color-backgroundB);
 
         animation: 400ms dialogEnter;
+        transition-behavior: allow-discrete;
+        transition: all 100ms;
     }
 
     dialog:focus {
