@@ -20,7 +20,7 @@
                     {hint.content.replace(/{.*?}/gm, '[?]')}
                 </blockquote>
                 <figcaption>
-                    From <cite>{hint.source}</cite> {#if hint.by} by {hint.by}{/if} ({hint.date})
+                    <cite>{hint.source} ({#if hint.by} {hint.by}{/if}, {hint.date})</cite>
                 </figcaption>
             </figure>
         {/each}
