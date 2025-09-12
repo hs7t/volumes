@@ -46,6 +46,10 @@ h1 {
     font-size: var(--v-size-font-largeA);
 }
 
+h2 {
+    font-size: var(--v-size-font-largeB)
+}
+
 .game-container {
     display: flex;
     flex-flow: column;
