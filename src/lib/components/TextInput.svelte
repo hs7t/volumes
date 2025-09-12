@@ -1,15 +1,22 @@
 <script>
     import Button from "./Button.svelte";
 
-    let { action = undefined, input = $bindable(), inputLabel = undefined, buttonLabel = "Enter" } = $props()
+    let { action = undefined, input = $bindable(), inputLabel = undefined, buttonLabel = "Enter", id = "textInput" } = $props()
+
+    function processEnter(e) {
+        if (e.key == "Enter") {
+            e.preventDefault()
+            action()
+        }
+    }
 </script>
 
 <div class="answer-form">
     <div class="input">
         {#if inputLabel}
-        <label for="input-box">{inputLabel}</label>
+        <label for={id}>{inputLabel}</label>
         {/if}
-        <input type="text" class="input-box" bind:value={input}>
+        <input {id} type="text" class="input-box" bind:value={input} onkeyup={processEnter}>
     </div>
 
     {#if action}
@@ -34,6 +41,7 @@
     .input-box {
         font-size: var(--v-size-font-primary);
         font-family: var(--v-font-secondary);
+        letter-spacing: 0.1ch;
         padding: 0.8ch;
 
         border: var(--v-border-primary);

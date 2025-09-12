@@ -34,7 +34,7 @@
     .snippets {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     figure {
@@ -42,7 +42,7 @@
         flex-direction: column;
         font-size: 1.4rem;
         margin: 0;
-        gap: 0.4em;
+        gap: 0.6rem;
         padding: 1ch;
         background-color: var(--v-color-backgroundC);
         border-radius: var(--v-radius-secondary);
