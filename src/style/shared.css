@@ -1,10 +1,10 @@
 :root {
-    --v-color-backgroundA: #ffcbaa;
-    --v-color-backgroundB: #fff5ef;
+    --v-color-backgroundA: #aedfb2;
+    --v-color-backgroundB: #ddffeb;
     --v-color-backgroundC: #ffffff;
-    --v-color-primary: #4d1e00;
-    --v-color-secondary: #7a533b;
-    --v-color-accent: #4d1e00;
+    --v-color-primary: #053700;
+    --v-color-secondary: #326353;
+    --v-color-accent: #084d00;
     --v-color-accentContrast: #ffffff;
 
     --v-radius-primary: 8pt;
