@@ -18,8 +18,8 @@
     --v-font-secondary: "Inclusive Sans", ui-sans-serif, sans-serif;
 
     --v-size-font-largeA: clamp(1rem, 5rem, 10rem);
-    --v-size-font-largeB: clamp(1rem, 2.5rem, 5rem);
-    --v-size-font-primary: 1.1rem;
+    --v-size-font-largeB: clamp(1rem, 2rem, 5rem);
+    --v-size-font-primary: 1.3rem;
 }
 
 * {
