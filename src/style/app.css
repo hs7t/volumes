@@ -14,6 +14,7 @@ body {
     color: var(--v-color-primary);
     font-family: var(--v-font-primary);
     font-size: var(--v-size-font-primary);
+    line-height: 1.4;
 }
 
 main {
