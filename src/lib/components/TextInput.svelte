@@ -1,15 +1,15 @@
 <script>
     import Button from "./Button.svelte";
 
-    let { action = undefined, input = $bindable(), inputLabel = undefined, buttonLabel = "Enter" } = $props()
+    let { action = undefined, input = $bindable(), inputLabel = undefined, buttonLabel = "Enter", id = "textInput" } = $props()
 </script>
 
 <div class="answer-form">
     <div class="input">
         {#if inputLabel}
-        <label for="input-box">{inputLabel}</label>
+        <label for={id}>{inputLabel}</label>
         {/if}
-        <input type="text" class="input-box" bind:value={input}>
+        <input {id} type="text" class="input-box" bind:value={input}>
     </div>
 
     {#if action}
