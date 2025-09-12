@@ -36,10 +36,8 @@
         font-family: var(--v-font-secondary);
         padding: 0.8ch;
 
-        border: none;
-        border-bottom: var(--v-border-secondary);
-        border-top-left-radius: var(--v-radius-secondary);
-        border-top-right-radius: var(--v-radius-secondary);
+        border: var(--v-border-primary);
+        border-radius: var(--v-radius-secondary);
         background-color: var(--v-color-backgroundC);
         color: inherit;
         transition: all 200ms;
