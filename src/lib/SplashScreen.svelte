@@ -9,12 +9,12 @@
 </script>
 
 {#snippet content()}
-    <h2>Volumes</h2>
+    <h2>How to play</h2>
+    <p>Guess a hidden word using up to three snippets of text.</p>
     <ul>
-        <li>Find the missing word using up to three snippets of text.</li>
         <li>You have five points.</li>
-        <li>Showing a snippet or entering a guess deducts one!</li>
-        <li>Try not to lose :P</li>
+        <li>Showing a snippet or entering a guess costs one point.</li>
+        <li>You lose when you're out of points. Try not to lose!</li>
     </ul>
 
     <Button action={() => makeShown(false)} text="Got it!"></Button>
