@@ -38,8 +38,11 @@
     }
 
     figure {
+        display: flex;
+        flex-direction: column;
         font-size: 1.4rem;
         margin: 0;
+        gap: 0.4em;
         padding: 1ch;
         background-color: var(--v-color-backgroundC);
         border-radius: var(--v-radius-secondary);
@@ -48,8 +51,17 @@
         transition: all 300ms;
     }
 
+    blockquote {
+        line-height: 1.4;
+    }
+
+    cite {
+        color: var(--v-color-secondary);
+        font-style: normal;
+    }
+
     figure:active {
-        transform: rotate(-1deg);
+        transform: scale(0.99);
         transition: all 250ms;
     }
 
