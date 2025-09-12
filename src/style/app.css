@@ -48,7 +48,7 @@ h1 {
 }
 
 h2 {
-    font-size: var(--v-size-font-largeB)
+    font-size: var(--v-size-font-largeB);
 }
 
 .game-container {
@@ -70,4 +70,9 @@ h2 {
     background-color: var(--v-color-backgroundB);
     border: var(--v-border-primary);
     border-radius: var(--v-radius-primary);
+}
+
+::selection {
+    background-color: var(--v-color-accent);
+    color: var(--v-color-accentContrast);
 }
