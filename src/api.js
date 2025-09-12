@@ -1,12 +1,9 @@
 async function fromJSONFile(path) {
-    const response = await fetch(path)
-    const text = await response.text()
-    
-    return JSON.parse(text)
+    return fetch(path).then((r) => r.json())
 }
 
 const config = await fromJSONFile(`${import.meta.env.BASE_URL}config.json`)
-const apiURL = await config['volnet_api_url']
+const apiURL = config['volnet_api_url']
 
 export async function fetchPuzzle() {
     const puzzleURL = new URL('v1/puzzles/latest', apiURL)
@@ -14,6 +11,12 @@ export async function fetchPuzzle() {
 
     let puzzle = {
         solution: response.word,
+        snippets: (response.snippets ?? []).map((snippet) => ({
+            content: snippet.text,
+            source: snippet.source.publication,
+            by: snippet.source.author,
+            date: snippet.year,
+        })),
     }
 
     return puzzle
