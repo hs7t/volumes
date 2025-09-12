@@ -1,6 +1,4 @@
 <script>
-    import { fade } from 'svelte/transition';
-
     let { content, shown = $bindable() } = $props()
     let dialogReference
     
@@ -26,6 +24,7 @@
         flex-direction: column;
         gap: 0.5rem;
 
+        color: var(--v-color-primary);
         border: var(--v-border-primary);
         border-radius: var(--v-radius-primary);
         background-color: var(--v-color-backgroundB);
