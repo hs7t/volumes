@@ -10,5 +10,11 @@ const apiURL = await config['volnet_api_url']
 
 export async function fetchPuzzle() {
     const puzzleURL = new URL('v1/puzzles/latest', apiURL)
-    return fromJSONFile(puzzleURL)
+    let response = await fromJSONFile(puzzleURL)
+
+    let puzzle = {
+        solution: response.word,
+    }
+
+    return puzzle
 }
