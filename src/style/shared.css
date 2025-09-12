@@ -19,7 +19,7 @@
 
     --v-size-font-largeA: clamp(1rem, 5rem, 10rem);
     --v-size-font-largeB: clamp(1rem, 2rem, 5rem);
-    --v-size-font-primary: 1.3rem;
+    --v-size-font-primary: 1.2rem;
 }
 
 * {
