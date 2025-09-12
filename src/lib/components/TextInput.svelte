@@ -42,7 +42,6 @@
         font-size: var(--v-size-font-primary);
         font-family: var(--v-font-secondary);
         letter-spacing: 0.1ch;
-        text-align: center;
         padding: 0.8ch;
 
         border: var(--v-border-primary);
