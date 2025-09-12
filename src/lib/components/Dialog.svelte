@@ -24,7 +24,8 @@
         flex-direction: column;
         gap: 0.5rem;
 
-        color: var(--v-color-primary);
+        color: inherit;
+        font-size: inherit;
         border: var(--v-border-primary);
         border-radius: var(--v-radius-primary);
         background-color: var(--v-color-backgroundB);
