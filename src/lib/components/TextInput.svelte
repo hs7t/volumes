@@ -43,6 +43,8 @@
         font-family: var(--v-font-secondary);
         letter-spacing: 0.1ch;
         padding: 0.8ch;
+        text-transform: uppercase;
+        font-weight: bold;
 
         border: var(--v-border-primary);
         border-radius: var(--v-radius-secondary);

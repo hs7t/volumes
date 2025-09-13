@@ -14,7 +14,7 @@
 <main>
   <header>
     <h1>Volumes</h1>
-    <p>for {date.toDateString()}</p>
+    <p class="date">for {date.toDateString()}</p>
   </header>
   <section class="game-container">
     <StatusBar />
@@ -24,9 +24,15 @@
 </main>
 
 <style>
+  @import './style/shared.css';
+  
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .date {
+    font-family: var(--v-font-secondary);
   }
 </style>

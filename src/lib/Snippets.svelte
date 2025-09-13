@@ -57,6 +57,7 @@
 
     cite {
         color: var(--v-color-secondary);
+        font-size: var(--v-size-font-small);
         font-style: normal;
     }
 
