@@ -23,7 +23,7 @@
             case 'lost':
                 dialogContent["title"] = "Good game!"
                 dialogContent["message"] = "Ah, you didn't make it this time. It's alright, though."
-                dialogContent["hint"] = ("The word was " + gameState.solution)
+                dialogContent["hint"] = ("The word was " + gameState.solution + ".")
                 break
         }
     })
@@ -33,7 +33,8 @@
     <h2>{dialogContent?.title}</h2>
     <p>
         {dialogContent?.message} Your score was of {dialogContent?.stats?.score}, and you 
-        used {dialogContent.stats.hintAmount} snippet{#if (!(dialogContent.stats.hintAmount == 1))}s{:else}{/if}.
+        used {dialogContent.stats.hintAmount} snippet{#if (!(dialogContent.stats.hintAmount == 1))}s{:else}{/if}. 
+        {dialogContent?.hint}
     </p>
     <Button action={resetGame} text="Solve again" />
 {/snippet}
