@@ -45,6 +45,9 @@
         color: var(--v-color-accentContrast);
         border: var(--v-border-primary);
         cursor: not-allowed;
+        text-decoration: line-through;
+        text-decoration-thickness: 0.1rem;
+        transition: all 100ms;
     }
 
     button:disabled:active {
