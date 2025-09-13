@@ -49,6 +49,8 @@ npm run build
 
 ...to get a built version at `/dist` - you can deploy it anywhere!
 
+This repo also contains a workflow for GitHub Pages, if that helps.
+
 ## Credits
 
 - [Vite](https://vite.dev/) (and its docs!!)
