@@ -23,7 +23,7 @@
             case 'lost':
                 dialogContent["title"] = "Good game!"
                 dialogContent["message"] = "Ah, you didn't make it this time. It's alright, though."
-                dialogContent["hint"] = ("The word was " + gameState.solution + ".")
+                dialogContent["hint"] = ("The word was '" + gameState.solution + "'.")
                 break
         }
     })
