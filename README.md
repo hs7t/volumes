@@ -1,8 +1,8 @@
 # Volumes
 
-Volumes is a daily word game inspired by the "examples" sections of dictionaries. This repository
+Volumes is a daily word game inspired by the example sections of dictionaries. This repository
 holds the front-end code for it. You can play Volumes at [my website](https://volumes.hvii.cc/),
-or check out the source here! (It's really bad. I'm sorry).
+or check out the source here! (It's really bad. I'm sorry). This is my first ever "real" web project.
 
 ## Running Volumes yourself
 
@@ -48,3 +48,17 @@ npm run build
 ```
 
 ...to get a built version at `/dist` - you can deploy it anywhere!
+
+## Credits
+
+- [Vite](https://vite.dev/) (and its docs!!)
+- [Svelte](https://svelte.dev/) (Svelte I love you and your tutorial is awesome)
+- [MDN](https://developer.mozilla.org/en-US/)
+- A few [Stack Overflow](https://stackoverflow.com/) posts I can't link to because I lost them
+
+### A note on LLMs
+
+Certain LLMs (Claude Sonnet 4, GPT-4o/5, Gemini on Google AI Overviews) were lightly 
+(often accidentally) used throughout the making of this project, mainly for research
+purposes. All code in this repository was written by me or kind 
+snippet-sharers on the internet (yes this is slop, but it's human slop!!)
