@@ -15,7 +15,7 @@
     --v-border-secondary: dashed var(--v-color-primary) 1pt;
 
     --v-font-primary: "Spectral", ui-serif, serif;
-    --v-font-secondary: "Jost", "Futura", "Century Gothic", ui-sans-serif, sans-serif;
+    --v-font-secondary: "Jost", "Futura", "Proxima Nova", ui-sans-serif, sans-serif;
 
     --v-size-font-largeA: clamp(1rem, 5rem, 10rem);
     --v-size-font-largeB: clamp(1rem, 2rem, 5rem);
