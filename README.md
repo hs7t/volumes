@@ -63,6 +63,6 @@ This repo also contains a workflow for GitHub Pages, if that helps.
 
 Certain LLMs (Claude Sonnet 4, GPT-4o/5, Gemini on Google AI Overviews) were lightly 
 (often accidentally) used throughout the making of this project, primarily for research
-purposes (I got REALLY frustrated once and Claude helped me find a bug, but that's it!). 
-All code in this repository was written by me or kind snippet-sharers on the internet 
-(yes this is slop, but it's human slop!!)
+purposes (otherwise, I got REALLY frustrated once and Claude helped me find a bug, but that's 
+it!). All code in this repository was written by me or kind snippet-sharers on the internet 
+(yes this is slop, but it's *my* slop!!)
