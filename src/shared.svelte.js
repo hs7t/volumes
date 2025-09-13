@@ -1,4 +1,4 @@
-import { fetchPuzzle } from './api'
+import { fetchPuzzle, checkGuessSimilarity } from './api'
 let puzzle = await fetchPuzzle()
 
 export const snippets = puzzle.snippets
@@ -73,8 +73,12 @@ export function checkCorrectness(guess) {
     return guess == puzzle.solution
 }
 
-export function processGuess(input) {
-    let output = { content: input, correct: checkCorrectness(input) }
+export async function processGuess(input) {
+    let output = {
+        content: input,
+        correct: checkCorrectness(input),
+        accuracy: await checkGuessSimilarity(input, puzzle.solution),
+    }
     gameState.guesses.push(output)
     return output
 }
@@ -93,7 +97,7 @@ export function correctGuessExists() {
 // Utilities
 
 export function normalize(text) {
-    return text.toLowerCase().trim().replace(/[.!-]/g, "")
+    return text.toLowerCase().trim().replace(/[.!-]/g, '')
 }
 
 export function resetGame() {

@@ -21,3 +21,18 @@ export async function fetchPuzzle() {
 
     return puzzle
 }
+
+export async function checkGuessSimilarity(guess, solution = undefined) {
+    let query = `similarity/${guess}`
+    if (solution) query += `?solution=${solution}`
+    const queryURL = new URL(query, apiURL)
+
+    const response = fetchFromJSON(queryURL)
+
+    try {
+        return Number(response)
+    } catch (error) {
+        console.error(error)
+        return undefined
+    }
+}
