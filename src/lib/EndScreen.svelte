@@ -34,7 +34,7 @@
     <p>
         {dialogContent?.message} Your score was of {dialogContent?.stats?.score}, and you 
         used {dialogContent.stats.hintAmount} snippet{#if (!(dialogContent.stats.hintAmount == 1))}s{:else}{/if}. 
-        {dialogContent?.hint}
+        {dialogContent?.['hint']}
     </p>
     <Button action={resetGame} text="Solve again" />
 {/snippet}
