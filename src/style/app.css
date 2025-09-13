@@ -12,7 +12,7 @@ body {
 
     background-color: var(--v-color-backgroundA);
     color: var(--v-color-primary);
-    font-family: var(--v-font-primary);
+    font-family: var(--v-font-secondary);
     font-size: var(--v-size-font-primary);
     line-height: 1.4;
 }
@@ -43,12 +43,24 @@ p {
     word-wrap: break-word;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--v-font-primary);
+}
+
 h1 {
     font-size: var(--v-size-font-largeA);
 }
 
 h2 {
     font-size: var(--v-size-font-largeB);
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0.5em;
 }
 
 .game-container {
