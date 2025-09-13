@@ -31,12 +31,14 @@
     
     .guess-reminder {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        gap: 0.2em;
+        align-items: center;
     }
     .guess-reminder .guess {
         text-decoration: line-through;
-        margin-right: 1ch;
-        background-color: var(--v-color-backgroundB);
+        padding: 0.5ch;
+        background-color: var(--v-color-backgroundC);
         border-radius: var(--v-radius-secondary);
     }
 </style>
