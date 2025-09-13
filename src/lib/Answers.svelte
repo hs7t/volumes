@@ -19,13 +19,24 @@
     <TextInput bind:input={input} action={processSubmit} inputLabel="Type in a guess..." buttonLabel="This is it!"></TextInput>
 
     {#if (gameState.guesses.length > 0)}
-        <p class="guess-reminder">Your guesses: {#each gameState.guesses as guess}<span class="guess">{guess.content}</span>{/each}</p>
+        <div class="guess-reminder">
+            <p>Your guesses:</p> 
+            {#each gameState.guesses as guess}<span class="guess">{guess.content}</span>{/each}
+        </div>
     {/if}
 </div>
 
 <style>
+    @import '../style/shared.css';
+    
+    .guess-reminder {
+        display: flex;
+        flex-direction: column;
+    }
     .guess-reminder .guess {
         text-decoration: line-through;
         margin-right: 1ch;
+        background-color: var(--v-color-backgroundB);
+        border-radius: var(--v-radius-secondary);
     }
 </style>
