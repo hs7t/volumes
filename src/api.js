@@ -27,7 +27,7 @@ export async function checkGuessSimilarity(guess, solution = undefined) {
     if (solution) query += `?solution=${solution}`
     const queryURL = new URL(query, apiURL)
 
-    const response = fetchFromJSON(queryURL)
+    const response = await fetchFromJSON(queryURL)
 
     try {
         return Number(response)
