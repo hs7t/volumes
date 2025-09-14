@@ -21,6 +21,13 @@
     <Snippets/>
     <Answers />
   </section>
+  <footer>
+    <p>❤️ 2025, <a href="https://hvii.cc/">Ali</a></p>
+    <p class="aside">
+        👀 Is your browser translating this? Please check. This game is meant to be played 
+        in English; it might break in other languages.
+    </p>
+  </footer>
 </main>
 
 <style>
@@ -34,5 +41,11 @@
 
   .date {
     font-family: var(--v-font-secondary);
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
 </style>
