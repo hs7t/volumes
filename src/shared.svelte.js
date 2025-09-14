@@ -26,6 +26,7 @@ export let gameState = $state({
 export function checkStatus(game) {
     function checkWon() {
         for (let guess of game.guesses) {
+            console.log(guess)
             if (guess.correct) return true
         }
         return false
@@ -73,12 +74,46 @@ export function checkCorrectness(guess) {
     return guess == puzzle.solution
 }
 
-export async function processGuess(input) {
-    let output = {
-        content: input,
-        correct: checkCorrectness(input),
-        accuracy: await checkGuessSimilarity(input, puzzle.solution),
+class Guess {
+    constructor(word) {
+        this.word = word
     }
+
+    get correct() {
+        return this.findCorrectness()
+    }
+
+    async findSimilarity() {
+        if (!this.similarity) {
+            this.similarity = checkGuessSimilarity(this.word, puzzle.solution)
+        }
+
+        return this.similarity
+    }
+
+    findCorrectness() {
+        return this.word == puzzle.solution
+    }
+
+    async findColor() {
+        let similarity = await this.findSimilarity()
+
+        if (similarity == 1) {
+            return '#FE8E5E'
+        } else if (similarity <= 0.2) {
+            return '#FFEB5E'
+        } else if (similarity <= 0.4) {
+            return '#FFC75A'
+        } else if (similarity <= 0.6) {
+            return '#FFB260'
+        } else {
+            return '#FFA15F'
+        }
+    }
+}
+
+export async function processGuess(input) {
+    let output = new Guess(input)
     gameState.guesses.push(output)
     return output
 }
