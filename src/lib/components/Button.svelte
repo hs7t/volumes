@@ -1,8 +1,9 @@
 <script>
-    let { action, text, disabled = false, style = "" } = $props()
+    import { useSound } from "svelte-sound"
+    let { action, text, disabled = false, style = "", sound = undefined } = $props()
 </script>
 
-<button onclick={action} {disabled} {style}>
+<button onclick={action} {disabled} {style} use:sound>
     {text}
 </button>
 

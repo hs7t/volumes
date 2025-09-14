@@ -1,6 +1,12 @@
 <script>
     import { gameState, fetchShownHints, showHint } from '../shared.svelte.js'
     import Button from './components/Button.svelte'
+
+    import { useSound } from "svelte-sound"
+    import snippetInAudioFile from "../assets/sfx/snippet.m4a"
+
+    let snippetInSound = useSound(snippetInAudioFile, ["click"]) 
+
     function newSnippet() {
         gameState.score -= 1;
         showHint();
@@ -25,7 +31,7 @@
             </figure>
         {/each}
     </div>
-    <Button action={newSnippet} text="Show another snippet ({fetchShownHints().length}/{gameState.hints.length})" disabled={noHintsLeft()} />
+    <Button action={newSnippet} text="Show another snippet ({fetchShownHints().length}/{gameState.hints.length})" disabled={noHintsLeft()} sound={snippetInSound} />
 </div>
 
 <style>
