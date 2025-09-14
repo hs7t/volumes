@@ -3,6 +3,15 @@
 
     let { action = undefined, input = $bindable(), inputLabel = undefined, buttonLabel = "Enter", inputBoxId = "textInput", buttonId = "inputButton", clickingSound = undefined } = $props()
 
+    function handleFocus(event) {
+        setTimeout(() => {
+            event.target.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+            });
+        }, 300);
+    }
+
     function processEnter(e) {
         if (e.key == "Enter") {
             e.preventDefault()
@@ -21,7 +30,7 @@
         {#if inputLabel}
         <label for={inputBoxId}>{inputLabel}</label>
         {/if}
-        <input id={inputBoxId} type="text" class="input-box" bind:value={input} onkeyup={processEnter}>
+        <input id={inputBoxId} type="text" class="input-box" bind:value={input} onkeyup={processEnter} onfocus={handleFocus}>
     </div>
 
     {#if action}
