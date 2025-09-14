@@ -21,7 +21,7 @@
     {#if (gameState.guesses.length > 0)}
         <div class="guess-reminder">
             <p>Your guesses:</p> 
-            {#each gameState.guesses as guess}<span class="guess" style="--l-backgroundColor={guess.appearance.color}">{guess.content}</span>{/each}
+            {#each gameState.guesses as guess}<span class="guess" style="--l-backgroundColor={guess?.appearance?.color}">{guess.content}</span>{/each}
         </div>
     {/if}
 </div>
