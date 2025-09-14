@@ -63,6 +63,10 @@ ul {
     margin-bottom: 0.5em;
 }
 
+a {
+    color: inherit;
+}
+
 .game-container {
     display: flex;
     flex-flow: column;
@@ -87,4 +91,9 @@ ul {
 ::selection {
     background-color: var(--v-color-accent);
     color: var(--v-color-accentContrast);
+}
+
+.aside {
+    font-size: var(--v-size-font-small);
+    font-family: var(--v-font-secondary);
 }
