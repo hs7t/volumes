@@ -85,9 +85,13 @@ class Guess {
 
     async findSimilarity() {
         if (!this.similarity) {
-            this.similarity = checkGuessSimilarity(this.word, puzzle.solution)
+            this.similarity = await checkGuessSimilarity(
+                this.word,
+                puzzle.solution
+            )
         }
 
+        console.log(this.similarity)
         return this.similarity
     }
 
@@ -98,7 +102,7 @@ class Guess {
     async findColor() {
         let similarity = await this.findSimilarity()
 
-        if (similarity == 1) {
+        if (similarity === 1) {
             return '#FE8E5E'
         } else if (similarity <= 0.2) {
             return '#FFEB5E'
