@@ -14,6 +14,7 @@
     <ul>
         <li>You have five points.</li>
         <li>Showing a snippet or entering a guess costs one point.</li>
+        <li>Closer guesses are highlighted in warmer colours.</li>
         <li>You lose when you're out of points. Try not to lose!</li>
     </ul>
     <Button action={() => makeShown(false)} text="Got it!"></Button>
