@@ -31,6 +31,7 @@
         background-color: var(--v-color-backgroundB);
 
         animation: 400ms dialogEnter;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
         transition-behavior: allow-discrete;
         transition: all 100ms;
     }
@@ -43,10 +44,12 @@
 
     @keyframes dialogEnter {
         0% {
-            transform: rotate(-1deg);
+            transform: scale(0.98);
+            opacity: 0.7;
         }
         100% {
             transform: none;
+            opacity: 1;
         }
     }
 
