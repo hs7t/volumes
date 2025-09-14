@@ -2,6 +2,11 @@
     import { processGuess, gameState, normalize } from '../shared.svelte'
     import TextInput from './components/TextInput.svelte'
 
+    import { useSound } from "svelte-sound"
+
+    import clickingSoundAudioFile from "../assets/sfx/type.m4a"
+    let clickingSound = useSound(clickingSoundAudioFile, ["click"])
+
     let input = $state("")
     let processSubmit = async () => {
         if (!(input === "" || input === undefined || input === null)) {
@@ -16,7 +21,7 @@
 
 <div class="card-area">
     <h2>What's today's word?</h2>
-    <TextInput bind:input={input} action={processSubmit} inputLabel="Type in a guess..." buttonLabel="This is it!"></TextInput>
+    <TextInput bind:input={input} action={processSubmit} inputLabel="Type in a guess..." buttonLabel="This is it!" {clickingSound}></TextInput>
 
     {#if (gameState.guesses.length > 0)}
         <div class="guess-reminder">
