@@ -56,6 +56,7 @@ This repo also contains a workflow for GitHub Pages, if that helps.
 - [Vite](https://vite.dev/) (and its docs!!)
 - [Svelte](https://svelte.dev/) (Svelte I love you and your tutorial is awesome)
 - [spaCy](https://spacy.io/) (on the back-end part, for guess processing)
+- [svelte-sound](https://github.com/Rajaniraiyn/svelte-sound) and [howler.js](https://howlerjs.com/)
 - [MDN](https://developer.mozilla.org/en-US/)
 - A few [Stack Overflow](https://stackoverflow.com/) posts I can't link to because I lost them
 
