@@ -1,12 +1,17 @@
 <script>
     import Button from "./Button.svelte";
 
-    let { action = undefined, input = $bindable(), inputLabel = undefined, buttonLabel = "Enter", inputId = "textInput", buttonId = "inputButton", clickingSound = undefined } = $props()
+    let { action = undefined, input = $bindable(), inputLabel = undefined, buttonLabel = "Enter", inputBoxId = "textInput", buttonId = "inputButton", clickingSound = undefined } = $props()
 
     function processEnter(e) {
         if (e.key == "Enter") {
             e.preventDefault()
             document.getElementById(buttonId).click()
+
+            document.getElementById(inputBoxId).classList.add("entered")
+            setTimeout(() => {
+                document.getElementById(inputBoxId).classList.remove("entered")
+            }, )
         }
     }
 </script>
@@ -14,9 +19,9 @@
 <div class="answer-form">
     <div class="input">
         {#if inputLabel}
-        <label for={inputId}>{inputLabel}</label>
+        <label for={inputBoxId}>{inputLabel}</label>
         {/if}
-        <input id={inputId} type="text" class="input-box" bind:value={input} onkeyup={processEnter}>
+        <input id={inputBoxId} type="text" class="input-box" bind:value={input} onkeyup={processEnter}>
     </div>
 
     {#if action}
