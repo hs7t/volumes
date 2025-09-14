@@ -5,7 +5,7 @@
     import { useSound } from "svelte-sound"
     import snippetInAudioFile from "../assets/sfx/snippet.m4a"
 
-    let snippetInSound = useSound(snippetInAudioFile, ["click"]) 
+    let snippetInSound = useSound(snippetInAudioFile, ["click"], {volume: 0.5}) 
 
     function newSnippet() {
         gameState.score -= 1;
