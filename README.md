@@ -4,6 +4,12 @@ Volumes is a daily word game inspired by the example sections of dictionaries. T
 holds the front-end code for it. You can play Volumes at [my website](https://volumes.hvii.cc/),
 or check out the source here! (It's really bad. I'm sorry). This is my first ever "real" web project.
 
+## Features
+- fun gameplay (I think)
+- daily puzzles, curated by me!
+- nice animations and some sound effects
+- termometer-like hint system using spaCy NLP
+
 ## Running Volumes yourself
 
 Volumes comes in two independent parts: the Volumes website (this repo) and the Volume Network 
