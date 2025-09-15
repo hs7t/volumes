@@ -35,7 +35,7 @@ API URL at `public/config.json`. By default, it's set to my own, something like 
 
 ```json
 {
-    "volnet_api_url": "https://volnet.hs7t.hackclub.app"
+    "volnet_api_url": "https://volnet.hs7t.hackclub.app/v1/"
 }
 ```
 
