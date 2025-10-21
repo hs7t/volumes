@@ -10,7 +10,6 @@
         message: "",
         stats:  {
             score: gameState.score,
-            totalScore: gameState.score - gameState.guesses.length + fetchShownHints().length,
             hintAmount: fetchShownHints().length,
         }
     })
@@ -33,7 +32,7 @@
 {#snippet content()}
     <h2>{dialogContent?.title}</h2>
     <p>
-        {dialogContent?.message} Your score was {dialogContent?.stats?.totalScore} out of {dialogContent?.stats?.score}, and you 
+        {dialogContent?.message} Your score was of {dialogContent?.stats?.score}, and you 
         used {dialogContent.stats.hintAmount} snippet{#if (!(dialogContent.stats.hintAmount == 1))}s{:else}{/if}. 
         {dialogContent?.['hint']}
     </p>
